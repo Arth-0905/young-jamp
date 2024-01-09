@@ -20,8 +20,8 @@ const mySwiper = new Swiper ('.swiper', {
 document.getElementbyId("p1").style.display = "none";
 
 function clickBtn() {
-  const p1 = document.getElementbyId("p1");
-  if(p1.style.display=="block"){
+  const p1 = document.getElementById("p1");
+  if(p1.style.display=="flex"){
     p1.style.display ="none";
   }else{
     p1.style.display ="flex";
