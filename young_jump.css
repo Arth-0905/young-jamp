@@ -13,8 +13,12 @@ header {
     display:flex;
 }
 
+.subtitle {
+    color:blue;
+}
+
 .header-list {
-    display:flex
+    display:flex;
 }
 
 .header-list ul {
@@ -37,6 +41,7 @@ header {
 .manga {
     margin:0 3%;
     width:93vw;
+    border-right:1px dashed gray;
 }
 .title-secondary {
     border-left:1px dashed gray;
@@ -66,7 +71,6 @@ header {
     width:23vw;
     height:75vw;
     margin-top:-5vw;
-    border-right:1px dashed gray;
     padding:0 20px;
 }
 
@@ -77,10 +81,6 @@ header {
 .contents-secondary {
     display: grid;
     grid-template-columns: 23vw 23vw 23vw 23vw;
-}
-
-.content-secondary {
-    border-right:1px dashed gray;
 }
 
 .extra-view {
@@ -107,4 +107,91 @@ footer {
     max-width:180px;
     min-width:150px;
     padding:0 20px;
+}
+
+@media screen and (max-width:1000px) {
+    header {
+        width:90vw;
+    }
+
+    .manga {
+        width:100%;
+        border-right:none;
+    }
+
+    .title{
+        flex-direction: column;
+        width:300px;
+    }
+
+    .maintitle {
+        order:1;
+    }
+
+    .subtitle {
+        order:0;
+    }
+
+    .contents {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .content {
+        border-left:none;
+    }
+
+    .side {
+        display: none;
+        grid-template-columns: 33% 33% 33%;
+    }
+    
+    .contents-secondary {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+}
+
+@media screen and (max-width:650px){
+    header {
+        display: block;
+    }
+
+    .title {
+        flex-direction: column;
+        margin:auto;
+    }
+
+    .manga {
+        display:block;
+        margin:-20px;
+    }
+
+    .title-secondary p {
+        padding-left: 20px;
+    }
+
+    .contents {
+        grid-template-columns:100%;
+        width:100%;
+    }
+
+    .content {
+        display:flex;
+        border-bottom:1px dashed gray;
+    }
+
+    .content img {
+        width: 160px;
+    }
+
+    .contents-secondary {
+        grid-template-columns:100%;
+        width:100%;
+    }
+
+    .extra input {
+        margin-top:20px;
+        margin-bottom:40px;
+    }
 }
