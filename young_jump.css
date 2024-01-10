@@ -139,6 +139,7 @@ footer {
 
     .content {
         border-left:none;
+        border-right:1px dashed gray;
     }
 
     .side {
